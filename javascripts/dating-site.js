@@ -14,13 +14,18 @@ require.config({
 });
 
 require(
-  ["dependencies"], 
-  function(_$_) {
+  ["dependencies", "eventsAPI"], 
+  function(_$_, eventsAPI) {
 
     var myFirebaseRef = new Firebase("https://ajada.firebaseio.com/");
     
     myFirebaseRef.child("Users").on("value", function(snapshot) {
       console.log(snapshot.val());  // Alerts "San Francisco"
+    });
+
+    var promise = eventsAPI();
+    promise.then(function(data){
+      console.log(data);
     });
     /*
       You can choose to use the REST methods to interact with
