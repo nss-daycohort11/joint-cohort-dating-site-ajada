@@ -66,11 +66,6 @@ require(
       }
     });
 
-    // $('#logup').on("click", function(){
-    //   console.log("click");
-    //   var email = $('#email');
-    //   var password = $('#password');
-    // });
     /*
       You can choose to use the REST methods to interact with
       Firebase, or you can use the Firebase API with event
