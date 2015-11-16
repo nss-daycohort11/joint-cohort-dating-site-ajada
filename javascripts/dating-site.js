@@ -16,7 +16,7 @@ require.config({
 require(
   ["dependencies", "eventsAPI"], 
   function(_$_, eventsAPI) {
-
+    
     var myFirebaseRef = new Firebase("https://ajada.firebaseio.com/");
     
     myFirebaseRef.child("Users").on("value", function(snapshot) {
@@ -27,6 +27,40 @@ require(
     promise.then(function(data){
       console.log(data);
     });
+
+    var signup = false;
+    $('#signupButton').on("click", function(){
+      signup = true;
+      console.log(signup);
+    });
+
+    $('#login').on("click", function(){
+      console.log("click");
+      var email = $('#email');
+      var password = $('#password');
+      if(signup){
+        //login
+        myFirebaseRef.createUser({
+          email    : email.val(),
+          password : password.val()
+        }, function(error, userData) {
+          if (error) {
+            console.log("Error creating user:", error);
+          } else {
+            console.log("Successfully created user account with uid:", userData.uid);
+            console.log(userData);
+          }
+        });
+      }else{
+        //signup
+      }
+    });
+
+    // $('#logup').on("click", function(){
+    //   console.log("click");
+    //   var email = $('#email');
+    //   var password = $('#password');
+    // });
     /*
       You can choose to use the REST methods to interact with
       Firebase, or you can use the Firebase API with event
