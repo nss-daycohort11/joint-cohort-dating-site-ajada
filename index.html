@@ -11,7 +11,22 @@
 
 <body>
   <h1>Ajada</h1>
-  
+  <div id="home-page">
+    <!-- Signup -->
+    <button class="middle btn btn-default" type="button" id="signupButton" style="float: right;">Sign Up</button>
+    <br>
+    <br>
+    <!-- this will be a modal -->
+    <div id="sign-up" style="display: none;">
+      <input class="middle form-control" type="text" id="email-signup">
+      <input class="middle form-control" type="text" id="password-signup">
+      <button class="middle btn btn-default" type="button">Register</button>
+    </div>
+    <!-- Login -->
+    <input class="middle form-control" type="text" id="email">
+    <input class="middle form-control" type="text" id="password">
+    <button class="middle btn btn-default" type="button" id="login">Login</button>
+  </div>
   <script data-main="javascripts/dating-site" src="lib/bower_components/requirejs/require.js"></script>
 
 </body>
