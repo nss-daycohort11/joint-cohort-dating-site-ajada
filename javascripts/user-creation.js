@@ -37,7 +37,7 @@ define(function() {
 
 		console.log("thisUserObject", thisUserObject);
 
-
+    var myFirebaseRef = new Firebase("https://ajada.firebaseio.com/");
     myFirebaseRef.createUser({
       email    : $('create-email-input').val(),
       password : thisUserObject.password
