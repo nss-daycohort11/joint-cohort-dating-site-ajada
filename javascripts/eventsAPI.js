@@ -11,7 +11,6 @@ define(function(require, date){
       method: "GET"
 
       }).done(function(data) {
-        console.log(data);
         deferred.resolve(data);
     });
     return deferred.promise;

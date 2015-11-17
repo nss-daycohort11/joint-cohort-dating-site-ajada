@@ -14,8 +14,8 @@ require.config({
 });
 
 require(
-  ["jquery", "q", "dependencies", "eventsAPI", "main"], 
-  function($, Q, _$_, eventsAPI, main) {
+  ["jquery", "q", "dependencies", "eventsAPI", "main", "hbs!../templates/profile"], 
+  function($, Q, _$_, eventsAPI, main, profileTemplate) {
     
     var myFirebaseRef = new Firebase("https://ajada.firebaseio.com/");
 
@@ -25,7 +25,6 @@ require(
 
     var promise = eventsAPI();
     promise.then(function(data){
-      console.log(data);
       require(['hbs!../templates/events'], function(eventsTemplate){
         $('#event-list').html(eventsTemplate({events: data.activities}));
       });
@@ -38,7 +37,6 @@ require(
     });
 
     $('#login').on("click", function(){
-      console.log("click");
       var email = $('#email').val();
       var password = $('#password').val();
       console.log(email, password);
@@ -65,23 +63,24 @@ require(
           })
           .done(function(users) {
             console.log(users);
-            var userProfile;
+            var signedInUserProfile;
             var otherUsers = [];
             for (var key in users){
-              console.log(users[key].email, authData.password.email);
               if(users[key].email === authData.password.email){
-                userProfile = users[key];
+                signedInUserProfile = users[key];
               }else{
                 otherUsers.push(users[key]);
               }
             }
-            console.log(userProfile);
-            console.log(otherUsers);
+            console.log("signedInUserProfile", signedInUserProfile);
+            console.log("otherUsers", otherUsers);
             require(['hbs!../templates/profile'], function(profileTemplate){
-              $('#personal-info').html(profileTemplate({profile: userProfile}));
+              var justThisObject = {"userprofiles":{ "userprofiles": {signedInUserProfile} } };
+              console.log("justThisObject", justThisObject);
+              $('#profile-content').html(profileTemplate(signedInUserProfile));
             });
             require(['hbs!../templates/users'], function(usersTemplate){
-              $('#people-list').html(usersTemplate({user: otherUsers}));
+              $('#people-list').html(usersTemplate({'userprofiles': otherUsers}));
             });
           });
         }
