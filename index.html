@@ -10,26 +10,125 @@
 </head>
 
 <body>
-  <h1>Ajada</h1>
-  <div id="home-page">
-    <!-- Signup -->
-    <button class="middle btn btn-default" type="button" id="signupButton">Sign Up</button>
-    <br>
-    <br>
-    <!-- Login -->
-    <div id="sign-in">
-      <input class="middle form-control" type="text" id="email">
-      <input class="middle form-control" type="text" id="password">
-      <button class="middle btn btn-default" type="button" id="login">Login</button>
-    </div>
-  </div>
 
-  <input type="text">
-  <select>
-    <option value=""></option>
-  </select>
-  <button type="button" id="api">find events</button>
-  <script data-main="javascripts/dating-site" src="lib/bower_components/requirejs/require.js"></script>
+	<div id="container">
+
+		<section id="entry-screen" class="page">
+			<h1 id="homeTitle">Ajada</h1>
+			<p id="homeSlogan">Your dating secretary.</p>
+
+			<div id="home-page">
+			  
+			    <div id="sign-in">
+			      <input class="middle form-control" type="text" id="email" placeholder="Enter Username">
+			      <input class="middle form-control" type="text" id="password" placeholder="Enter Password">
+
+			      <!-- Login -->
+			      <button class="middle page-turn btn btn-default" type="button" id="login" next="account-page">Login</button>
+
+			      <!-- Signup -->
+			      <button class="middle page-turn btn btn-default" type="button" id="signupButton" next="sign-up">Sign Up</button>
+			    </div>
+			</div>
+		</section>
+
+		<section class="page sign-up">
+			<h1 id="homeTitle">NoAjada</h1>
+			<p id="homeSlogan">This is the second page.</p>
+
+			<div id="home-page">
+			  
+			    <div id="sign-in">
+			      <input class="middle form-control" type="text" id="email" placeholder="Enter Username">
+			      <input class="middle form-control" type="text" id="password" placeholder="Enter Password">
+			      <input class="middle form-control" type="text" id="password" placeholder="Enter Gender">
+			      <input class="middle form-control" type="text" id="password" placeholder="Enter Age">
+			      <input class="middle form-control" type="text" id="password" placeholder="Enter Orientation">
+			      <input class="middle form-control" type="text" id="password" placeholder="Upload Photo">
+
+			      <!-- Login -->
+			      <button class="middle page-turn btn btn-default" type="button" id="login" next="profile-page">Submit Info</button>
+
+			    </div>
+			</div>
+		</section>
+
+		<section class="page profile-page">
+			<h1 id="homeTitle">YesAjada</h1>
+			<p id="homeSlogan">This is the profile page.</p>
+
+			<div id="home-page">
+			  
+			    <div id="sign-in">
+			      <img src="" style="width: 100px; height: 100px; background-color: red;">
+			      <p>Blah blah blah personal info and essay.</p>
+
+			      <p>List of their events.</p>
+
+			      <!-- Choose Activity -->
+			      <button class="middle page-turn btn btn-default" type="button" id="login" next="activity-page">Choose Activity</button>
+			    </div>
+			</div>
+		</section>
+
+		<section class="page activity-page">
+			<h1 id="homeTitle">ActiveAjada</h1>
+			<p id="homeSlogan">This is the activity page.</p>
+
+			<div id="home-page">
+			  
+			    <div id="sign-in">
+			      
+			    	<button class="middle page-turn btn btn-default" type="button" id="login" next="activity-page">Filter1</button>
+			    	<button class="middle page-turn btn btn-default" type="button" id="login" next="activity-page">Filter2</button>
+
+			    	<button class="middle page-turn btn btn-default" type="button" id="login" next="activity-match-page">Clear Filter</button>
+			     
+			      	<p>List of activities</p>
+
+			    </div>
+			</div>
+		</section>
+
+		<section class="page activity-match-page">
+			<h1 id="homeTitle">matchAjada</h1>
+			<p id="homeSlogan">This is the activity match page.</p>
+
+			<div id="home-page">
+			  
+			    <div id="sign-in">
+			      	<img src="" style="width: 100px; height: 100px; background-color: red;">
+
+			    	<p>Event info</p>
+			    	<p>Profile matches with buttons.</p>
+
+			    	<button class="middle page-turn btn btn-default" type="button" id="login" next="confirm-activity-page">Clear Filter</button>
+
+			    </div>
+			</div>
+		</section>
+
+		<section class="page confirm-activity-page">
+			<h1 id="homeTitle">confirmAjada</h1>
+			<p id="homeSlogan">This is the confirmed activity page.</p>
+
+			<div id="home-page">
+			  
+			    <div id="sign-in">
+			      	<img src="" style="width: 100px; height: 100px; background-color: red;">
+
+			    	<p>Confirmation info</p>
+			    	<p>Contact info and mini messaging.</p>
+
+			    </div>
+			</div>
+		</section>
+
+
+
+	</div>
+
+	<script data-main="javascripts/dating-site" src="lib/bower_components/requirejs/require.js"></script>
 
 </body>
 </html>

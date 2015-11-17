@@ -65,8 +65,18 @@ require(
         });
       }
     });
-
     
+    $(".page").hide();
+    $("#entry-screen").show();
+    
+    $(".page-turn").click(function(e) {
+      var nextPage = $(this).attr("next");
+
+      $(".page").hide();
+      $("." + nextPage).show();
+
+    });
+
 
     /*
       You can choose to use the REST methods to interact with
