@@ -39,15 +39,26 @@
 			<div id="home-page">
 			  
 			    <div id="sign-in">
-			      <input class="middle form-control" type="text" id="email" placeholder="Enter Username">
-			      <input class="middle form-control" type="text" id="password" placeholder="Enter Password">
-			      <input class="middle form-control" type="text" id="password" placeholder="Enter Gender">
-			      <input class="middle form-control" type="text" id="password" placeholder="Enter Age">
-			      <input class="middle form-control" type="text" id="password" placeholder="Enter Orientation">
-			      <input class="middle form-control" type="text" id="password" placeholder="Upload Photo">
+                  <input class="middle form-control" type="text" id="create-username-input" placeholder="Enter Username">
+                  <input class="middle form-control" type="text" id="create-password-input" placeholder="Enter Password">
+                  <input class="middle form-control" type="text" id="age-input" placeholder="Enter Age">
+                  <div id="gender-options">
+	                  <input class="middle form-control" type="radio" value="male" name="gender" id="gender-input-m">Male<br>
+	                  <input class="middle form-control" type="radio" value="female" name="gender" id="gender-input-f">Female
+	              </div>
 
-			      <!-- Login -->
-			      <button class="middle page-turn btn btn-default" type="button" id="login" next="profile-page">Submit Info</button>
+                  <div id="orientation-options">
+                      <input class="middle form-control" type="radio" value="straight" name="orientation" id="gender-input-straight"><label>Straight</label>
+                      <input class="middle form-control" type="radio" value="gay" name="orientation" id="orientation-input-gay"><label>Gay</label>
+                      <input class="middle form-control" type="radio" value="bisexual" name="orientation" id="orientation-input-bi"><label>Bisexual</label>
+                  </div>
+
+                  <input class="middle form-control" type="text" id="password" placeholder="Upload Photo">
+
+                  <!-- Login -->
+                  <button class="middle page-turn btn btn-default" type="button" id="submit-created-profile" next="profile-page">Submit Info</button>
+
+                </div>
 
 			    </div>
 			</div>

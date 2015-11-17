@@ -14,8 +14,8 @@ require.config({
 });
 
 require(
-  ["dependencies", "eventsAPI"], 
-  function(_$_, eventsAPI) {
+  ["jquery", "q", "dependencies", "eventsAPI", "main"], 
+  function($, Q, _$_, eventsAPI, main) {
     
     var myFirebaseRef = new Firebase("https://ajada.firebaseio.com/");
     
