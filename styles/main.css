@@ -6,8 +6,13 @@ body {
   font-family: Tahoma, Helvetica, sans-serif;
   background-color: #8BC34A; }
 
+h2 {
+  text-shadow: 0 4px 8px #33691E;
+  color: #fff;
+  font-size: 2.5em;
+  margin: 3% 0 4%; }
+
 #homeTitle {
-  text-align: center;
   font-family: serif;
   font-style: italic;
   font-size: 14em;
@@ -16,20 +21,29 @@ body {
   margin: 8% 0 2%; }
 
 #homeSlogan {
-  font-family: serif;
+  font-family: sans-serif;
+  text-shadow: 0 4px 8px #558B2F;
   color: #fff;
-  text-align: center;
   font-size: 1.9em;
-  margin: 3% 0 8%; }
+  margin: 5% 0 8%;
+  padding-left: 11%; }
 
 #container {
   width: 80%;
   margin: 0 auto; }
 
+#entry-screen {
+  background-image: url("http://cliparts.co/cliparts/gTe/obG/gTeobG8Gc.png");
+  background-repeat: no-repeat;
+  background-position: 110% 0%; }
+
 .middle {
   display: block;
   text-align: center;
   margin: 0 auto; }
+
+.page {
+  padding-bottom: 4%; }
 
 #sign-in {
   text-align: center; }
@@ -37,6 +51,12 @@ body {
 #sign-in input {
   margin-bottom: 5%;
   width: 80%;
+  font-size: 2em;
+  height: auto; }
+
+#sign-in.create-account input {
+  margin-bottom: 5%;
+  width: 100%;
   font-size: 2em;
   height: auto; }
 
@@ -52,5 +72,46 @@ body {
 
 #sign-in button:hover {
   background-color: #33691E; }
+
+.sign-up {
+  width: 80%;
+  margin: 0 auto; }
+
+#ajada-header {
+  background-color: #558B2F;
+  border-radius: 10px;
+  border: 2px solid #33691E;
+  text-align: center;
+  padding: 4%;
+  margin: 4% 0; }
+
+.head {
+  float: left;
+  margin-right: 0 2%;
+  width: 100px; }
+
+#gender-options,
+#orientation-options {
+  border-top: 1px solid #558B2F;
+  width: 100%;
+  padding: 4% 0; }
+
+#gender-options input.middle,
+#orientation-options input.middle {
+  display: inline-block;
+  width: auto;
+  box-shadow: none;
+  font-size: 1.9em;
+  margin-bottom: 1%; }
+
+#gender-options label,
+#orientation-options label {
+  font-size: 1.4em;
+  margin: 0 3% 0 1%;
+  font-weight: normal; }
+
+#gender-options label:last-child,
+#orientation-options label:last-child {
+  margin-right: 0; }
 
 /*# sourceMappingURL=main.css.map */

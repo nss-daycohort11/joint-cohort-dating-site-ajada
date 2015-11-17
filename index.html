@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Joint team project - Dating site</title>
+  <title>Ajada - Your Dating Secretary</title>
 
   <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="styles/main.css">
@@ -21,7 +21,7 @@
 			  
 			    <div id="sign-in">
 			      <input class="middle form-control" type="text" id="email" placeholder="Enter Username">
-			      <input class="middle form-control" type="text" id="password" placeholder="Enter Password">
+			      <input class="middle form-control" type="password" id="password" placeholder="Enter Password">
 
 			      <!-- Login -->
 			      <button class="middle page-turn btn btn-default" type="button" id="login" next="account-page">Login</button>
@@ -33,33 +33,46 @@
 		</section>
 
 		<section class="page sign-up">
-			<h1 id="homeTitle">NoAjada</h1>
-			<p id="homeSlogan">This is the second page.</p>
+			<div id="ajada-header">
+				<img src="./images/ajada-head.png" class="head">
+				<h2>Ajada Says, "Sign Up, Please!"</h2>
+			</div>
 
-			<div id="home-page">
+			<div id="account-creation-page">
 			  
-			    <div id="sign-in">
-			      <input class="middle form-control" type="text" id="email" placeholder="Enter Username">
-			      <input class="middle form-control" type="text" id="password" placeholder="Enter Password">
-			      <input class="middle form-control" type="text" id="password" placeholder="Enter Gender">
-			      <input class="middle form-control" type="text" id="password" placeholder="Enter Age">
-			      <input class="middle form-control" type="text" id="password" placeholder="Enter Orientation">
-			      <input class="middle form-control" type="text" id="password" placeholder="Upload Photo">
+			    <div id="sign-in" class="create-account">
+			      <input class="middle form-control" type="text" id="create-username-input" placeholder="Enter Username">
+			      <input class="middle form-control" type="text" id="create-password-input" placeholder="Enter Password">
+			      <input class="middle form-control" type="text" id="age-input" placeholder="Enter Age">
+			      <div id="gender-options">
+				      <input class="middle form-control" type="radio" value="male" name="gender" id="gender-input-m"><label>Male</label>
+				      <input class="middle form-control" type="radio" value="female" name="gender" id="gender-input-f"><label>Female</label>
+			  	  </div>
+
+			  	  <div id="orientation-options">
+				      <input class="middle form-control" type="radio" value="straight" name="orientation" id="gender-input-straight"><label>Straight</label>
+				      <input class="middle form-control" type="radio" value="gay" name="orientation" id="orientation-input-gay"><label>Gay</label>
+				      <input class="middle form-control" type="radio" value="bisexual" name="orientation" id="orientation-input-bi"><label>Bisexual</label>
+			  	  </div>
+
+			      <!-- <input class="middle form-control" type="text" id="password" placeholder="Upload Photo"> -->
 
 			      <!-- Login -->
-			      <button class="middle page-turn btn btn-default" type="button" id="login" next="profile-page">Submit Info</button>
+			      <button class="middle page-turn btn btn-default" type="button" id="submit-created-profile" next="profile-page">Submit Info</button>
 
 			    </div>
 			</div>
 		</section>
 
 		<section class="page profile-page">
-			<h1 id="homeTitle">YesAjada</h1>
-			<p id="homeSlogan">This is the profile page.</p>
+			<div id="ajada-header">
+				<img src="./images/ajada-head.png" class="head">
+				<h2>Ajada Says, "Welcome!"</h2>
+			</div>
 
-			<div id="home-page">
+			<div id="profile-page">
 			  
-			    <div id="sign-in">
+			    <div id="profile-info">
 			      <img src="" style="width: 100px; height: 100px; background-color: red;">
 			      <p>Blah blah blah personal info and essay.</p>
 
