@@ -18,6 +18,10 @@ h2 {
 	margin: 3% 0 4%;
 }
 
+.bold {
+	font-weight: bold;
+}
+
 #homeTitle {
   font-family: serif;
   font-style: italic;
@@ -57,25 +61,25 @@ h2 {
 	padding-bottom: 4%;
 }
 
-#sign-in {
+#content {
 	text-align: center;
 }
 
-#sign-in input {
+#content input {
 	margin-bottom: 5%;
 	width: 80%;
 	font-size: 2em;
 	height: auto;
 }
 
-#sign-in.create-account input {
+#content.create-account input {
 	margin-bottom: 5%;
 	width: 100%;
 	font-size: 2em;
 	height: auto;
 }
 
-#sign-in button {
+#content button {
 	display: inline-block;
 	background-color: $button;
 	color: #fff;
@@ -86,11 +90,15 @@ h2 {
 	padding: 1% 2%;
 }
 
-#sign-in button:hover {
+#content button:hover {
 	background-color: $accent;
 }
 
-.sign-up {
+.sign-up,
+.profile-page,
+.activity-page,
+.activity-match-page,
+.confirm-activity-page {
 	width: 80%;
 	margin: 0 auto;
 }
@@ -110,11 +118,18 @@ h2 {
 	width: 100px;
 }
 
-#gender-options,
-#orientation-options {
+#gender-options {
 	border-top: 1px solid $button;
 	width: 100%;
 	padding: 4% 0;
+}
+
+#orientation-options {
+	border-top: 1px solid $button;
+	border-bottom: 1px solid $button;
+	width: 100%;
+	padding: 4% 0;
+	margin-bottom: 4%;
 }
 
 #gender-options input.middle,
@@ -136,6 +151,58 @@ h2 {
 #gender-options label:last-child,
 #orientation-options label:last-child {
 	margin-right: 0;
+}
+
+#content img {
+	float: left;
+	margin-right: 30px;
+}
+
+#personal-info {
+	text-align: left;
+	margin-bottom: 25px;
+}
+
+#personal-info h3 {
+	color: $accent;
+}
+
+#event-list {
+	border: 1px solid $button;
+	margin-bottom: 40px;
+	padding: 0 3%;
+}
+
+#event-list-header {
+	background-color: $button;
+	color: #fff;
+	text-align: left;
+	padding: 20px 0 20px 20px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+#event-list-header h3 {
+	margin: 0;
+}
+
+#event-list-header > button {
+	float: right;
+	margin-right: 10px;
+	font-size: 1.4em;
+	position: relative;
+	top: -35px;
+}
+
+.event {
+	border-bottom: 1px solid $button;
+	min-height: 150px;
+	text-align: left;
+	padding: 20px 0;
+}
+
+.event:last-child {
+	border-bottom: 0;
 }
 
 

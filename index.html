@@ -19,12 +19,12 @@
 
 			<div id="home-page">
 			  
-			    <div id="sign-in">
+			    <div id="content">
 			      <input class="middle form-control" type="text" id="email" placeholder="Enter Username">
 			      <input class="middle form-control" type="password" id="password" placeholder="Enter Password">
 
 			      <!-- Login -->
-			      <button class="middle page-turn btn btn-default" type="button" id="login" next="account-page">Login</button>
+			      <button class="middle page-turn btn btn-default" type="button" id="login" next="profile-page">Login</button>
 
 			      <!-- Signup -->
 			      <button class="middle page-turn btn btn-default" type="button" id="signupButton" next="sign-up">Sign Up</button>
@@ -40,7 +40,7 @@
 
 			<div id="account-creation-page">
 			  
-			    <div id="sign-in" class="create-account">
+			    <div id="content" class="create-account">
 			      <input class="middle form-control" type="text" id="create-username-input" placeholder="Enter Username">
 			      <input class="middle form-control" type="text" id="create-password-input" placeholder="Enter Password">
 			      <input class="middle form-control" type="text" id="age-input" placeholder="Enter Age">
@@ -72,14 +72,64 @@
 
 			<div id="profile-page">
 			  
-			    <div id="profile-info">
-			      <img src="" style="width: 100px; height: 100px; background-color: red;">
-			      <p>Blah blah blah personal info and essay.</p>
+			    <div id="content">
+			      <img src="images/silhouette.png" style="width: 200px; height: 200px; background-color: white;">
+			      <div id="personal-info">
+			      	<h3>Steve Person</h3>
+			      	<p><span class="bold">Age:</span> 35<br>
+			      	<span class="bold">Gender:</span> Male<br>
+				  	<span class="bold">Orientation:</span> Straight</p>
 
-			      <p>List of their events.</p>
+				  	<p>I live by myself, I pay my own rent, I wear socks that match and I love my mom. I am a confident, attractive and comedic person.
 
-			      <!-- Choose Activity -->
-			      <button class="middle page-turn btn btn-default" type="button" id="login" next="activity-page">Choose Activity</button>
+				  	I do stunt work. Have you ever seen it in a movie when a hot actor has to reveal his naked ass? That’s my job. Oh, and I’m in the fitness biz, as well as back in school finishing up my pre-med reqs.</p>
+				  </div>
+
+				  <div>
+					  <div id="event-list-header">
+					  	<h3>YOUR MATCHES</h3>
+					  	 <button class="middle page-turn btn btn-default" type="button" id="login" next="activity-page">Search Matches</button>
+					  </div>
+
+					  <div id="event-list">
+			      	  	<div class="event">
+			      	  		<img src="images/silhouette.png" style="width: 100px; height: 100px; background-color: #000;">
+			      	  		<p>I'm now looking for a relationship, but I'm not looking to jump into anything without getting to know someone first. I've never been married, so I'm pretty sure it won't kill me to take things slow and make sure we are compatible. If you are divorced, I'm totally OK with that. You had to leave him in order to find me right? :)</p>
+			      	  	</div>
+			      	  	<div class="event">
+			      	  		<img src="images/silhouette.png" style="width: 100px; height: 100px; background-color: #000;">
+			      	  		<p>I'm unique in that I will not waste time with "shallow" interactions. I'm only open to meaningful, honest, and exclusive relationships with like minded people. I'm not concerned with having tons of friends. A few good friends is all I need. I know it's hard to get to know someone by just a few photos and a couple of paragraphs, so if you want to get to know me better you should message me.</p>
+			      	  	</div>
+			      	  	<div class="event">
+			      	  		<img src="images/silhouette.png" style="width: 100px; height: 100px; background-color: #000;">
+			      	  		<p>I've been told I'm a gentleman and hopeless romantic...yes we do exist! Therefore my motto in life has always been and will always be "Quality vs. Quantity." So, ladies, I am not on here looking for just sex or a "friends with benefits". As my profile says, I am looking for a relationship. That doesn't mean being attached at the hip but seeing one another often.</p>
+			      	  	</div>
+			      	  </div>
+			      </div>
+
+
+				  <div>
+					  <div id="event-list-header">
+					  	<h3>YOUR EVENTS</h3>
+					  	 <button class="middle page-turn btn btn-default" type="button" id="login" next="activity-page">Choose New Activity</button>
+					  </div>
+
+					  <div id="event-list">
+			      	  	<div class="event">
+			      	  		<img src="" style="width: 100px; height: 100px; background-color: #000;">
+			      	  		<p>Ryman Auditorium is a 2,362-seat live performance venue, located at 116 5th Avenue North, in Nashville, Tennessee and is best known as the home of the Grand Ole Opry from 1943 to 1974. It is owned and operated by Ryman Hospitality Properties, Inc.</p>
+			      	  	</div>
+			      	  	<div class="event">
+			      	  		<img src="" style="width: 100px; height: 100px; background-color: #000;">
+			      	  		<p>Ryman Auditorium is a 2,362-seat live performance venue, located at 116 5th Avenue North, in Nashville, Tennessee and is best known as the home of the Grand Ole Opry from 1943 to 1974. It is owned and operated by Ryman Hospitality Properties, Inc.</p>
+			      	  	</div>
+			      	  	<div class="event">
+			      	  		<img src="" style="width: 100px; height: 100px; background-color: #000;">
+			      	  		<p>Ryman Auditorium is a 2,362-seat live performance venue, located at 116 5th Avenue North, in Nashville, Tennessee and is best known as the home of the Grand Ole Opry from 1943 to 1974. It is owned and operated by Ryman Hospitality Properties, Inc.</p>
+			      	  	</div>
+			      	  </div>
+			      </div>
+
 			    </div>
 			</div>
 		</section>
@@ -90,7 +140,7 @@
 
 			<div id="home-page">
 			  
-			    <div id="sign-in">
+			    <div id="content">
 			      
 			    	<button class="middle page-turn btn btn-default" type="button" id="login" next="activity-page">Filter1</button>
 			    	<button class="middle page-turn btn btn-default" type="button" id="login" next="activity-page">Filter2</button>
@@ -109,7 +159,7 @@
 
 			<div id="home-page">
 			  
-			    <div id="sign-in">
+			    <div id="content">
 			      	<img src="" style="width: 100px; height: 100px; background-color: red;">
 
 			    	<p>Event info</p>
@@ -127,7 +177,7 @@
 
 			<div id="home-page">
 			  
-			    <div id="sign-in">
+			    <div id="content">
 			      	<img src="" style="width: 100px; height: 100px; background-color: red;">
 
 			    	<p>Confirmation info</p>
