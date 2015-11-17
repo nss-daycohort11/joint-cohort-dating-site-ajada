@@ -34,6 +34,8 @@ define(["register-user"], function(registeruser) {
 		thisUserObject.gender = getRadioValue("gender");
 		thisUserObject.orientation = getRadioValue("orientation");
 
+		thisUserObject.email = $('#create-email-input').val();
+
 		registeruser(thisUserObject)
 			.then(function(data) {
 				console.log("data", data);
@@ -44,18 +46,19 @@ define(["register-user"], function(registeruser) {
 
 		console.log("thisUserObject", thisUserObject);
 
-    var myFirebaseRef = new Firebase("https://ajada.firebaseio.com/");
-    myFirebaseRef.createUser({
-      email    : $('#create-email-input').val(),
-      password : thisUserObject.password
-    }, function(error, userData) {
-      if (error) {
-        console.log("Error creating user:", error);
-      } else {
-        console.log("Successfully created user account with uid:", userData.uid);
-        console.log(userData);
-      }
-    });
+	    var myFirebaseRef = new Firebase("https://ajada.firebaseio.com/");
+	    myFirebaseRef.createUser({
+	      email    : $('#create-email-input').val(),
+	      password : thisUserObject.password
+	    }, function(error, userData) {
+	      if (error) {
+	        console.log("Error creating user:", error);
+	      } else {
+	        console.log("Successfully created user account with uid:", userData.uid);
+	        console.log(userData);
+	      }
+	    });
+
 	});
 
 
