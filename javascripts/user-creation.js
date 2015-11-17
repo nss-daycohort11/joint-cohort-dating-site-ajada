@@ -31,8 +31,12 @@ define(["register-user"], function(registeruser) {
 		thisUserObject.password = $("#create-password-input").val();
 		thisUserObject.age = $("#age-input").val();
 
+		thisUserObject.firstname = $("#create-firstname").val();
+		thisUserObject.lastname = $("#create-lastname").val();
+
 		thisUserObject.gender = getRadioValue("gender");
 		thisUserObject.orientation = getRadioValue("orientation");
+		thisUserObject.essay = $("#essayText").val();
 
 		thisUserObject.email = $('#create-email-input').val();
 
