@@ -26,6 +26,9 @@ require(
     var promise = eventsAPI();
     promise.then(function(data){
       console.log(data);
+      require(['hbs!../templates/events'], function(eventsTemplate){
+        $('#event-list').html(eventsTemplate({events: data.activities}));
+      });
     });
 
     var signup = false;
@@ -47,6 +50,9 @@ require(
           console.log("Login Failed!", error);
         } else {
           console.log("Authenticated successfully with payload:", authData);
+          // require(['hbs!../templates/profile'], function(profileTemplate){
+          //   $('#personal-info').html(profileTemplate({profile: authData.password}));
+          // });
         }
       });
     });
