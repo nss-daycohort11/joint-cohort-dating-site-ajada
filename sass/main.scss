@@ -72,7 +72,8 @@ h2 {
 	height: auto;
 }
 
-#content.create-account input {
+#content.create-account input,
+#content.create-account textarea {
 	margin-bottom: 5%;
 	width: 100%;
 	font-size: 2em;
@@ -163,11 +164,21 @@ h2 {
 	margin-bottom: 25px;
 }
 
-#personal-info h3 {
+#match-info {
+	text-align: left;
+}
+
+#match-info h3 {
+	margin-top: 0;
+}
+
+#personal-info h3,
+#match-info h3 {
 	color: $accent;
 }
 
-#event-list {
+#event-list, 
+#people-list {
 	border: 1px solid $button;
 	margin-bottom: 40px;
 	padding: 0 3%;
@@ -203,6 +214,21 @@ h2 {
 
 .event:last-child {
 	border-bottom: 0;
+}
+
+.glyphicon-heart {
+	float: right;
+	position: relative;
+	top: -35px;
+	color: $button;
+	border: 1px solid $button;
+	padding: 8px 8px 6px 6px;
+	border-radius: 6px;
+}
+
+.glyphicon-heart:hover {
+	color: #fff;
+	background-color: $accent;
 }
 
 

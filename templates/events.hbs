@@ -1,3 +1,6 @@
 {{#each events}}
-  <h3>{{ title }}</h3>
+	<div class="event">
+		<img src="{{largeImageURL}}" style="width: 200px; background-color: #000;">
+		<p><span class="bold">{{title}}</span><br>Duration of Event: {{duration}}<br>Price: {{fromPrice}}</p>
+	</div>
 {{/each}}
