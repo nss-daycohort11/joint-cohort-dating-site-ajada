@@ -36,35 +36,22 @@ require(
 
     $('#login').on("click", function(){
       console.log("click");
-      var email = $('#email');
-      var password = $('#password');
-      if(signup){
-        //login
-        myFirebaseRef.createUser({
-          email    : email.val(),
-          password : password.val()
-        }, function(error, userData) {
-          if (error) {
-            console.log("Error creating user:", error);
-          } else {
-            console.log("Successfully created user account with uid:", userData.uid);
-            console.log(userData);
-          }
-        });
-      }else{
-        //signup
-        myFirebaseRef.authWithPassword({
-          email    : email.val(),
-          password : password.val()
-        }, function(error, authData) {
-          if (error) {
-            console.log("Login Failed!", error);
-          } else {
-            console.log("Authenticated successfully with payload:", authData);
-          }
-        });
-      }
+      var email = $('#email').val();
+      var password = $('#password').val();
+      console.log(email, password);
+      myFirebaseRef.authWithPassword({
+        email    : email,
+        password : password
+      }, function(error, authData) {
+        if (error) {
+          console.log("Login Failed!", error);
+        } else {
+          console.log("Authenticated successfully with payload:", authData);
+        }
+      });
     });
+
+    
     
     $(".page").hide();
     $("#entry-screen").show();
