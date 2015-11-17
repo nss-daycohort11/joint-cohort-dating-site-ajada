@@ -18,7 +18,7 @@ require(
   function($, Q, _$_, eventsAPI, main) {
     
     var myFirebaseRef = new Firebase("https://ajada.firebaseio.com/");
-    
+
     myFirebaseRef.child("Users").on("value", function(snapshot) {
       console.log(snapshot.val());  // Alerts "San Francisco"
     });
@@ -53,6 +53,37 @@ require(
           // require(['hbs!../templates/profile'], function(profileTemplate){
           //   $('#personal-info').html(profileTemplate({profile: authData.password}));
           // });
+          // var f2 = new Firebase("https://ajada.firebaseio.com/userprofiles");
+          // f2.child("userprofiles").on("value", function(snapshot) {
+          //   console.log(snapshot.val());  // Alerts "San Francisco"
+          //   var users = snapshot.val();
+          // });
+          $.ajax({
+            url: "https://ajada.firebaseio.com/userprofiles.json",
+            method: "GET"
+            // data: JSON.stringify(newUser)
+          })
+          .done(function(users) {
+            console.log(users);
+            var userProfile;
+            var otherUsers = [];
+            for (var key in users){
+              console.log(key.email, authData.password.email);
+              if(key.email === authData.password.email){
+                userProfile = key;
+              }else{
+                otherUsers.push(key);
+              }
+            }
+            console.log(userProfile);
+            console.log(otherUsers);
+            require(['hbs!../templates/profile'], function(profileTemplate){
+              $('#personal-info').html(profileTemplate({profile: userProfile}));
+            });
+            require(['hbs!../templates/users'], function(usersTemplate){
+              $('#people-list').html(usersTemplate({users: usersTemplate}));
+            });
+          });
         }
       });
     });
