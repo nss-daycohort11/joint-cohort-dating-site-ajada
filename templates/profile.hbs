@@ -1,2 +1,11 @@
-{{email}}
-<img src="{{profileImageURL}}">
+{{#each userprofiles}}
+<img src="images/silhouette.png" style="width: 200px; height: 200px; background-color: white;">
+<div id="personal-info">
+	<h3>{{firstname}} {{lastname}}</h3>
+	<p><span class="bold">Age:</span> {{age}}<br>
+	<span class="bold">Gender:</span> {{gender}}<br>
+	<span class="bold">Orientation:</span> {{orientation}}</p>
+
+	<p>{{essay}}</p>
+</div>
+{{/each}}
