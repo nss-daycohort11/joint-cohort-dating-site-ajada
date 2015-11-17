@@ -27,16 +27,29 @@ define(function() {
 		orientationOptions = $("#orientation-options");
 
 		thisUserObject.username = $("#create-username-input").val();
+
 		thisUserObject.password = $("#create-password-input").val();
 		thisUserObject.age = $("#age-input").val();
 
 		thisUserObject.gender = getRadioValue("gender");
 		thisUserObject.orientation = getRadioValue("orientation");
 
+
 		console.log("thisUserObject", thisUserObject);
-		});
+
+
+    myFirebaseRef.createUser({
+      email    : $('create-email-input').val(),
+      password : thisUserObject.password
+    }, function(error, userData) {
+      if (error) {
+        console.log("Error creating user:", error);
+      } else {
+        console.log("Successfully created user account with uid:", userData.uid);
+        console.log(userData);
+      }
+    });
+	});
 
 		// POST TO FIREBASE API VIA AJAX
-
-
 });
