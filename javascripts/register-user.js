@@ -19,7 +19,7 @@ define(["q"], function(Q) {
 		.fail(function(error) {
 			deferred.reject(error);
 			console.log("oh no!");
-		})
+		});
 		return deferred.promise;
 	};
 
