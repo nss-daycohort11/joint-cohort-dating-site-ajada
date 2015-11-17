@@ -39,7 +39,7 @@ define(function() {
 
     var myFirebaseRef = new Firebase("https://ajada.firebaseio.com/");
     myFirebaseRef.createUser({
-      email    : $('create-email-input').val(),
+      email    : $('#create-email-input').val(),
       password : thisUserObject.password
     }, function(error, userData) {
       if (error) {
