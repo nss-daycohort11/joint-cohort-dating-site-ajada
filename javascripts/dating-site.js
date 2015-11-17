@@ -68,11 +68,11 @@ require(
             var userProfile;
             var otherUsers = [];
             for (var key in users){
-              console.log(key.email, authData.password.email);
-              if(key.email === authData.password.email){
-                userProfile = key;
+              console.log(users[key].email, authData.password.email);
+              if(users[key].email === authData.password.email){
+                userProfile = users[key];
               }else{
-                otherUsers.push(key);
+                otherUsers.push(users[key]);
               }
             }
             console.log(userProfile);
@@ -81,7 +81,7 @@ require(
               $('#personal-info').html(profileTemplate({profile: userProfile}));
             });
             require(['hbs!../templates/users'], function(usersTemplate){
-              $('#people-list').html(usersTemplate({users: usersTemplate}));
+              $('#people-list').html(usersTemplate({user: otherUsers}));
             });
           });
         }
