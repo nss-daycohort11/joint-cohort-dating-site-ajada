@@ -3,12 +3,8 @@ define(["q"], function(Q) {
 	return function(newUser) {
 		var deferred = Q.defer();
 
-
-// -k234w: {userobject}
-
-
 		$.ajax({
-			url: "ajada/userprofiles",
+			url: "https://ajada.firebaseio.com/userprofiles.json",
 			method: "POST",
 			data: JSON.stringify(newUser)
 		})
@@ -18,7 +14,7 @@ define(["q"], function(Q) {
 		})
 		.fail(function(error) {
 			deferred.reject(error);
-			console.log("oh no!");
+			console.log("oh no! post failed");
 		});
 		return deferred.promise;
 	};

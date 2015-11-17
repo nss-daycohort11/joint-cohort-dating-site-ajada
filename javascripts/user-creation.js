@@ -1,4 +1,4 @@
-define(function() {
+define(["register-user"], function(registeruser) {
 	var thisUserObject = {}, genderOptions, orientationOptions, createNewAccountButton;
 	
 	createNewAccountButton = $("#submit-created-profile");
@@ -34,6 +34,13 @@ define(function() {
 		thisUserObject.gender = getRadioValue("gender");
 		thisUserObject.orientation = getRadioValue("orientation");
 
+		registeruser(thisUserObject)
+			.then(function(data) {
+				console.log("data", data);
+			})
+			.fail(function(error) {
+				console.log("error", error);
+			});
 
 		console.log("thisUserObject", thisUserObject);
 
@@ -51,5 +58,5 @@ define(function() {
     });
 	});
 
-		// POST TO FIREBASE API VIA AJAX
+
 });
