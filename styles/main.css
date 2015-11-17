@@ -1,12 +1,56 @@
 body {
-  display: block; }
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: Tahoma, Helvetica, sans-serif;
+  background-color: #8BC34A; }
 
-h1 {
-  text-align: center; }
+#homeTitle {
+  text-align: center;
+  font-family: serif;
+  font-style: italic;
+  font-size: 14em;
+  color: #fff;
+  text-shadow: 0 4px 8px #558B2F;
+  margin: 8% 0 2%; }
+
+#homeSlogan {
+  font-family: serif;
+  color: #fff;
+  text-align: center;
+  font-size: 1.9em;
+  margin: 3% 0 8%; }
+
+#container {
+  width: 80%;
+  margin: 0 auto; }
 
 .middle {
   display: block;
   text-align: center;
   margin: 0 auto; }
+
+#sign-in {
+  text-align: center; }
+
+#sign-in input {
+  margin-bottom: 5%;
+  width: 80%;
+  font-size: 2em;
+  height: auto; }
+
+#sign-in button {
+  display: inline-block;
+  background-color: #558B2F;
+  color: #fff;
+  border: 2px solid #33691E;
+  border-radius: 10px;
+  margin: 0 10px;
+  font-size: 1.6em;
+  padding: 1% 2%; }
+
+#sign-in button:hover {
+  background-color: #33691E; }
 
 /*# sourceMappingURL=main.css.map */

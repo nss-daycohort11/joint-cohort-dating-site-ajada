@@ -1,9 +1,37 @@
+$background: #8BC34A;
+$button: #558B2F;
+$accent: #33691E;
+
 body {
   display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: Tahoma, Helvetica, sans-serif;
+  background-color: $background;
 }
 
-h1 {
+#homeTitle {
   text-align: center;
+  font-family: serif;
+  font-style: italic;
+  font-size: 14em;
+  color: #fff;
+  text-shadow: 0 4px 8px $button;
+  margin: 8% 0 2%;
+}
+
+#homeSlogan {
+	font-family: serif;
+	color: #fff;
+	text-align: center;
+	font-size: 1.9em;
+	margin: 3% 0 8%;
+}
+
+#container {
+	width: 80%;
+	margin: 0 auto;
 }
 
 .middle{
@@ -11,3 +39,36 @@ h1 {
   text-align: center;
   margin: 0 auto;
 }
+
+#sign-in {
+	text-align: center;
+}
+
+#sign-in input {
+	margin-bottom: 5%;
+	width: 80%;
+	font-size: 2em;
+	height: auto;
+}
+
+#sign-in button {
+	display: inline-block;
+	background-color: $button;
+	color: #fff;
+	border: 2px solid $accent;
+	border-radius: 10px;
+	margin: 0 10px;
+	font-size: 1.6em;
+	padding: 1% 2%;
+}
+
+#sign-in button:hover {
+	background-color: $accent;
+}
+
+
+
+
+
+
+

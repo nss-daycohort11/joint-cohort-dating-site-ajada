@@ -66,6 +66,40 @@ require(
       }
     });
 
+    $(".page").hide();
+    $("#entry-screen").show();
+    
+    $(".page-turn").click(function(e) {
+    var nextPage = $(this).attr("next");
+
+    $(".page").hide();
+    $("." + nextPage).show();
+
+    });
+/*    var moveAlong = false;
+
+    switch (nextPage) {
+      case "card--class":
+        moveAlong = ($("#player-name").val() !== "");
+        break;
+      case "card--character":
+        moveAlong = ($("#player-name").val() !== "");
+        break;
+      case "card--battleground":
+        moveAlong = ($("#player-name").val() !== "");
+        break;
+      case "card--end":
+        moveAlong = ($("#player-name").val() !== "");
+        break;
+
+    }
+
+    if (moveAlong) {
+      $(".card").hide();
+      $("." + nextCard).show();
+    }*/
+  
+
     /*
       You can choose to use the REST methods to interact with
       Firebase, or you can use the Firebase API with event
