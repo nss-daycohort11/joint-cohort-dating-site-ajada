@@ -1,4 +1,4 @@
-define(["register-user"], function(registeruser) {
+define(["register-user", "populate-profile", "return-users"], function(registeruser, populate, returnuser) {
 	var thisUserObject = {}, genderOptions, orientationOptions, createNewAccountButton;
 	
 	createNewAccountButton = $("#submit-created-profile");
@@ -62,6 +62,11 @@ define(["register-user"], function(registeruser) {
 	        console.log(userData);
 	      }
 	    });
+
+	    returnuser.retrieveUsers();
+	    populate.populateProfile();
+	    console.log("This is inside click");
+          
 
 	});
 

@@ -95,7 +95,8 @@ h2 {
 #entry-screen {
   background-image: url("http://cliparts.co/cliparts/gTe/obG/gTeobG8Gc.png");
   background-repeat: no-repeat;
-  background-position: 110% 0%; }
+  background-position: 110% 0%;
+  max-width: 900px; }
 
 /* SIGN UP PAGE STYLES */
 #content.create-account input,

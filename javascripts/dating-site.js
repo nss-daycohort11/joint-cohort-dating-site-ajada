@@ -14,8 +14,8 @@ require.config({
 });
 
 require(
-  ["jquery", "q", "dependencies", "eventsAPI", "main", "hbs!../templates/profile"], 
-  function($, Q, _$_, eventsAPI, main, profileTemplate) {
+  ["jquery", "q", "dependencies", "eventsAPI", "main", "hbs!../templates/profile", "populate-profile", "return-users"], 
+  function($, Q, _$_, eventsAPI, main, profileTemplate, populateUserToProfile, returnusers) {
     
     var myFirebaseRef = new Firebase("https://ajada.firebaseio.com/");
 
@@ -30,14 +30,15 @@ require(
       });
     });
 
-    /*jshint esnext: true */
-
     var signup = false;
     $('#signupButton').on("click", function(){
       signup = true;
       console.log(signup);
     });
 
+    /*jshint esnext: true */
+
+    // User authentication, private process w/ Firebase
     $('#login').on("click", function(){
       var email = $('#email').val();
       var password = $('#password').val();
@@ -50,40 +51,16 @@ require(
           console.log("Login Failed!", error);
         } else {
           console.log("Authenticated successfully with payload:", authData);
-          // require(['hbs!../templates/profile'], function(profileTemplate){
-          //   $('#personal-info').html(profileTemplate({profile: authData.password}));
-          // });
-          // var f2 = new Firebase("https://ajada.firebaseio.com/userprofiles");
-          // f2.child("userprofiles").on("value", function(snapshot) {
-          //   console.log(snapshot.val());  // Alerts "San Francisco"
-          //   var users = snapshot.val();
-          // });
-          $.ajax({
-            url: "https://ajada.firebaseio.com/userprofiles.json",
-            method: "GET"
-            // data: JSON.stringify(newUser)
+
+        returnusers.retrieveUsers()
+          // Gets the list of users once ajax call complete
+          .then(function(users) {
+            console.log("users", users);
+            // On sign in, populates user profile and all dating site users. 
+            populateUserToProfile.populateProfile(authData, users);
           })
-          .done(function(users) {
-            console.log(users);
-            var signedInUserProfile;
-            var otherUsers = [];
-            for (var key in users){
-              if(users[key].email === authData.password.email){
-                signedInUserProfile = users[key];
-              }else{
-                otherUsers.push(users[key]);
-              }
-            }
-            console.log("signedInUserProfile", signedInUserProfile);
-            console.log("otherUsers", otherUsers);
-            require(['hbs!../templates/profile'], function(profileTemplate){
-              var justThisObject = {"userprofiles":{ "userprofiles": {signedInUserProfile} } };
-              console.log("justThisObject", justThisObject);
-              $('#profile-content').html(profileTemplate(signedInUserProfile));
-            });
-            require(['hbs!../templates/users'], function(usersTemplate){
-              $('#people-list').html(usersTemplate({'userprofiles': otherUsers}));
-            });
+          .fail(function(error) {
+            console.log("error", error);
           });
         }
       });
