@@ -2,6 +2,9 @@ $background: #8BC34A;
 $button: #558B2F;
 $accent: #33691E;
 
+
+/* GENERAL STYLES */
+
 body {
   display: block;
   margin: 0;
@@ -22,33 +25,9 @@ h2 {
 	font-weight: bold;
 }
 
-#homeTitle {
-  font-family: serif;
-  font-style: italic;
-  font-size: 14em;
-  color: #fff;
-  text-shadow: 0 4px 8px $button;
-  margin: 8% 0 2%;
-}
-
-#homeSlogan {
-	font-family: sans-serif;
-	text-shadow: 0 4px 8px $button;
-	color: #fff;
-	font-size: 1.9em;
-	margin: 5% 0 8%;
-	padding-left: 11%;
-}
-
 #container {
 	width: 80%;
 	margin: 0 auto;
-}
-
-#entry-screen {
-	background-image: url("http://cliparts.co/cliparts/gTe/obG/gTeobG8Gc.png");
-  	background-repeat: no-repeat;
-  	background-position: 110% 0%;
 }
 
 .middle{
@@ -72,14 +51,6 @@ h2 {
 	height: auto;
 }
 
-#content.create-account input,
-#content.create-account textarea {
-	margin-bottom: 5%;
-	width: 100%;
-	font-size: 2em;
-	height: auto;
-}
-
 #content button {
 	display: inline-block;
 	background-color: $button;
@@ -93,6 +64,11 @@ h2 {
 
 #content button:hover {
 	background-color: $accent;
+}
+
+#content img {
+	float: left;
+	margin-right: 30px;
 }
 
 .sign-up,
@@ -117,6 +93,44 @@ h2 {
 	float: left;
 	margin-right: 0 2%;
 	width: 100px;
+}
+
+
+/* HOME PAGE STYLES */
+
+#homeTitle {
+  font-family: serif;
+  font-style: italic;
+  font-size: 14em;
+  color: #fff;
+  text-shadow: 0 4px 8px $button;
+  margin: 8% 0 2%;
+}
+
+#homeSlogan {
+	font-family: sans-serif;
+	text-shadow: 0 4px 8px $button;
+	color: #fff;
+	font-size: 1.9em;
+	margin: 5% 0 8%;
+	padding-left: 11%;
+}
+
+#entry-screen {
+	background-image: url("http://cliparts.co/cliparts/gTe/obG/gTeobG8Gc.png");
+  	background-repeat: no-repeat;
+  	background-position: 110% 0%;
+}
+
+
+/* SIGN UP PAGE STYLES */
+
+#content.create-account input,
+#content.create-account textarea {
+	margin-bottom: 5%;
+	width: 100%;
+	font-size: 2em;
+	height: auto;
 }
 
 #gender-options {
@@ -154,9 +168,11 @@ h2 {
 	margin-right: 0;
 }
 
-#content img {
-	float: left;
-	margin-right: 30px;
+
+/* PROFILE PAGE STYLES */
+
+#profile-content {
+	min-height: 210px;
 }
 
 #personal-info {
@@ -229,6 +245,7 @@ h2 {
 .glyphicon-heart:hover {
 	color: #fff;
 	background-color: $accent;
+	cursor: pointer;
 }
 
 

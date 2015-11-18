@@ -1,3 +1,4 @@
+/* GENERAL STYLES */
 body {
   display: block;
   margin: 0;
@@ -15,30 +16,9 @@ h2 {
 .bold {
   font-weight: bold; }
 
-#homeTitle {
-  font-family: serif;
-  font-style: italic;
-  font-size: 14em;
-  color: #fff;
-  text-shadow: 0 4px 8px #558B2F;
-  margin: 8% 0 2%; }
-
-#homeSlogan {
-  font-family: sans-serif;
-  text-shadow: 0 4px 8px #558B2F;
-  color: #fff;
-  font-size: 1.9em;
-  margin: 5% 0 8%;
-  padding-left: 11%; }
-
 #container {
   width: 80%;
   margin: 0 auto; }
-
-#entry-screen {
-  background-image: url("http://cliparts.co/cliparts/gTe/obG/gTeobG8Gc.png");
-  background-repeat: no-repeat;
-  background-position: 110% 0%; }
 
 .middle {
   display: block;
@@ -57,13 +37,6 @@ h2 {
   font-size: 2em;
   height: auto; }
 
-#content.create-account input,
-#content.create-account textarea {
-  margin-bottom: 5%;
-  width: 100%;
-  font-size: 2em;
-  height: auto; }
-
 #content button {
   display: inline-block;
   background-color: #558B2F;
@@ -76,6 +49,10 @@ h2 {
 
 #content button:hover {
   background-color: #33691E; }
+
+#content img {
+  float: left;
+  margin-right: 30px; }
 
 .sign-up,
 .profile-page,
@@ -97,6 +74,36 @@ h2 {
   float: left;
   margin-right: 0 2%;
   width: 100px; }
+
+/* HOME PAGE STYLES */
+#homeTitle {
+  font-family: serif;
+  font-style: italic;
+  font-size: 14em;
+  color: #fff;
+  text-shadow: 0 4px 8px #558B2F;
+  margin: 8% 0 2%; }
+
+#homeSlogan {
+  font-family: sans-serif;
+  text-shadow: 0 4px 8px #558B2F;
+  color: #fff;
+  font-size: 1.9em;
+  margin: 5% 0 8%;
+  padding-left: 11%; }
+
+#entry-screen {
+  background-image: url("http://cliparts.co/cliparts/gTe/obG/gTeobG8Gc.png");
+  background-repeat: no-repeat;
+  background-position: 110% 0%; }
+
+/* SIGN UP PAGE STYLES */
+#content.create-account input,
+#content.create-account textarea {
+  margin-bottom: 5%;
+  width: 100%;
+  font-size: 2em;
+  height: auto; }
 
 #gender-options {
   border-top: 1px solid #558B2F;
@@ -128,9 +135,9 @@ h2 {
 #orientation-options label:last-child {
   margin-right: 0; }
 
-#content img {
-  float: left;
-  margin-right: 30px; }
+/* PROFILE PAGE STYLES */
+#profile-content {
+  min-height: 210px; }
 
 #personal-info {
   text-align: left;
@@ -190,6 +197,7 @@ h2 {
 
 .glyphicon-heart:hover {
   color: #fff;
-  background-color: #33691E; }
+  background-color: #33691E;
+  cursor: pointer; }
 
 /*# sourceMappingURL=main.css.map */

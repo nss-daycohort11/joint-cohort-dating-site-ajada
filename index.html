@@ -1,174 +1,186 @@
 <!doctype html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Ajada - Your Dating Secretary</title>
+	<head>
+	  <meta charset="utf-8">
+	  <title>Ajada - Your Dating Secretary</title>
 
-  <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="styles/main.css">
-</head>
+	  <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	  <link rel="stylesheet" type="text/css" href="styles/main.css">
+	</head>
 
-<body>
+	<body>
 
-	<div id="container">
+		<div id="container">
 
-		<section id="entry-screen" class="page">
-			<h1 id="homeTitle">Ajada</h1>
-			<p id="homeSlogan">Your dating secretary.</p>
+			<!-- HOME PAGE -->
 
-			<div id="home-page">
-			  
-			    <div id="content">
-			      <input class="middle form-control" type="text" id="email" placeholder="Enter Username">
-			      <input class="middle form-control" type="password" id="password" placeholder="Enter Password">
+			<section id="entry-screen" class="page">
+				<h1 id="homeTitle">Ajada</h1>
+				<p id="homeSlogan">Your dating secretary.</p>
 
-			      <!-- Login -->
-			      <button class="middle page-turn btn btn-default" type="button" id="login" next="profile-page">Login</button>
+				<div id="home-page">
+				  
+				    <div id="content">
+				      <input class="middle form-control" type="text" id="email" placeholder="Enter Username">
+				      <input class="middle form-control" type="password" id="password" placeholder="Enter Password">
 
-			      <!-- Signup -->
-			      <button class="middle page-turn btn btn-default" type="button" id="signupButton" next="sign-up">Sign Up</button>
-			    </div>
-			</div>
-		</section>
+				      <!-- Login -->
+				      <button class="middle page-turn btn btn-default" type="button" id="login" next="profile-page">Login</button>
 
-		<section class="page sign-up">
-			<div id="ajada-header">
-				<img src="./images/ajada-head.png" class="head">
-				<h2>Ajada Says, "Sign Up, Please!"</h2>
-			</div>
+				      <!-- Signup -->
+				      <button class="middle page-turn btn btn-default" type="button" id="signupButton" next="sign-up">Sign Up</button>
+				    </div>
+				</div>
+			</section>
 
-			<div id="account-creation-page">
-			  
-			<div id="content" class="create-account">
-            	  <input class="middle form-control" type="text" id="create-firstname" placeholder="Enter First Name">
+			<!-- SIGN UP PAGE -->
 
-            	  <input class="middle form-control" type="text" id="create-lastname" placeholder="Enter Last Name">
+			<section class="page sign-up">
+				<div id="ajada-header">
+					<img src="./images/ajada-head.png" class="head">
+					<h2>Ajada Says, "Sign Up, Please!"</h2>
+				</div>
 
-            	  <input class="middle form-control" type="text" id="create-email-input" placeholder="Enter Email">
+				<div id="account-creation-page">
+				  
+				<div id="content" class="create-account">
+	            	  <input class="middle form-control" type="text" id="create-firstname" placeholder="Enter First Name">
 
-			      <input class="middle form-control" type="text" id="create-username-input" placeholder="Enter Username">
-			      <input class="middle form-control" type="text" id="create-password-input" placeholder="Enter Password">
-			      <input class="middle form-control" type="text" id="age-input" placeholder="Enter Age">
-			      <div id="gender-options">
-				      <input class="middle form-control" type="radio" value="male" name="gender" id="gender-input-m"><label>Male</label>
-				      <input class="middle form-control" type="radio" value="female" name="gender" id="gender-input-f"><label>Female</label>
-			  	  </div>
+	            	  <input class="middle form-control" type="text" id="create-lastname" placeholder="Enter Last Name">
 
-			  	  <div id="orientation-options">
-				      <input class="middle form-control" type="radio" value="straight" name="orientation" id="gender-input-straight"><label>Straight</label>
-				      <input class="middle form-control" type="radio" value="gay" name="orientation" id="orientation-input-gay"><label>Gay</label>
-				      <input class="middle form-control" type="radio" value="bisexual" name="orientation" id="orientation-input-bi"><label>Bisexual</label>
-			  	  </div>
+	            	  <input class="middle form-control" type="text" id="create-email-input" placeholder="Enter Email">
 
-			  	  <div id="essay">
-				      <textarea class="middle form-control" type="text" placeholder="Tell Us A Little About Yourself!" id="essayText"></textarea>
-			  	  </div>
+				      <input class="middle form-control" type="text" id="create-username-input" placeholder="Enter Username">
+				      <input class="middle form-control" type="password" id="create-password-input" placeholder="Enter Password">
+				      <input class="middle form-control" type="text" id="age-input" placeholder="Enter Age">
+				      <div id="gender-options">
+					      <input class="middle form-control" type="radio" value="male" name="gender" id="gender-input-m"><label>Male</label>
+					      <input class="middle form-control" type="radio" value="female" name="gender" id="gender-input-f"><label>Female</label>
+				  	  </div>
 
-			      <!-- <input class="middle form-control" type="text" id="password" placeholder="Upload Photo"> -->
+				  	  <div id="orientation-options">
+					      <input class="middle form-control" type="radio" value="straight" name="orientation" id="gender-input-straight"><label>Straight</label>
+					      <input class="middle form-control" type="radio" value="gay" name="orientation" id="orientation-input-gay"><label>Gay</label>
+					      <input class="middle form-control" type="radio" value="bisexual" name="orientation" id="orientation-input-bi"><label>Bisexual</label>
+				  	  </div>
 
-			      <!-- Login -->
-			      <button class="middle page-turn btn btn-default" type="button" id="submit-created-profile" next="profile-page">Submit Info</button>
+				  	  <div id="essay">
+					      <textarea class="middle form-control" type="text" placeholder="Tell Us A Little About Yourself!" id="essayText"></textarea>
+				  	  </div>
 
-			    </div>
-			</div>
-		</section>
+				      <!-- TBD: UPLOAD PHOTO FUNCTIONALITY 
 
-		<section class="page profile-page">
-			<div id="ajada-header">
-				<img src="./images/ajada-head.png" class="head">
-				<h2>Ajada Says, "Welcome!"</h2>
-			</div>
+				      <input class="middle form-control" type="text" id="password" placeholder="Upload Photo"> -->
 
-			<div id="profile-page">
-			  
-			    <div id="content">
-			      <div id="profile-content">
-				  </div>
+				      <button class="middle page-turn btn btn-default" type="button" id="submit-created-profile" next="profile-page">Submit Info</button>
 
-				  <div>
-					  <div id="event-list-header">
-					  	<h3>YOUR MATCHES</h3>
-					  	 <button class="middle page-turn btn btn-default" type="button" id="login" next="activity-page">Search Matches</button>
+				    </div>
+				</div>
+			</section>
+
+			<!-- PROFILE PAGE -->
+
+			<section class="page profile-page">
+				<div id="ajada-header">
+					<img src="./images/ajada-head.png" class="head">
+					<h2>Ajada Says, "Welcome!"</h2>
+				</div>
+
+				<div id="profile-page">
+				  
+				    <div id="content">
+				      <div id="profile-content">
 					  </div>
 
-					  <div id="people-list">
-			      	  </div>
-			      </div>
+					  <div>
+						  <div id="event-list-header">
+						  	<h3>YOUR MATCHES</h3>
+						  	 <button class="middle page-turn btn btn-default" type="button" id="login" next="activity-page">Search Matches</button>
+						  </div>
+
+						  <div id="people-list">
+				      	  </div>
+				      </div>
 
 
-				  <div>
-					  <div id="event-list-header">
-					  	<h3>YOUR EVENTS</h3>
-					  	 <button class="middle page-turn btn btn-default" type="button" id="login" next="activity-page">Choose New Activity</button>
-					  </div>
+					  <div>
+						  <div id="event-list-header">
+						  	<h3>YOUR EVENTS</h3>
+						  	 <button class="middle page-turn btn btn-default" type="button" id="login" next="activity-page">Choose New Activity</button>
+						  </div>
 
-					  <div id="event-list">
-			      	  </div>
-			      </div>
+						  <div id="event-list">
+				      	  </div>
+				      </div>
 
-			    </div>
-			</div>
-		</section>
+				    </div>
+				</div>
+			</section>
 
-		<section class="page activity-page">
-			<h1 id="homeTitle">ActiveAjada</h1>
-			<p id="homeSlogan">This is the activity page.</p>
+			<!-- POTENTIAL ACTIVITIES LISTING PAGE -->
 
-			<div id="home-page">
-			  
-			    <div id="content">
-			      
-			    	<button class="middle page-turn btn btn-default" type="button" id="login" next="activity-page">Filter1</button>
-			    	<button class="middle page-turn btn btn-default" type="button" id="login" next="activity-page">Filter2</button>
+			<section class="page activity-page">
+				<h1 id="homeTitle">ActiveAjada</h1>
+				<p id="homeSlogan">This is the activity page.</p>
 
-			    	<button class="middle page-turn btn btn-default" type="button" id="login" next="activity-match-page">Clear Filter</button>
-			     
-			      	<p>List of activities</p>
+				<div id="home-page">
+				  
+				    <div id="content">
+				      
+				    	<button class="middle page-turn btn btn-default" type="button" id="login" next="activity-page">Filter1</button>
+				    	<button class="middle page-turn btn btn-default" type="button" id="login" next="activity-page">Filter2</button>
 
-			    </div>
-			</div>
-		</section>
+				    	<button class="middle page-turn btn btn-default" type="button" id="login" next="activity-match-page">Clear Filter</button>
+				     
+				      	<p>List of activities</p>
 
-		<section class="page activity-match-page">
-			<h1 id="homeTitle">matchAjada</h1>
-			<p id="homeSlogan">This is the activity match page.</p>
+				    </div>
+				</div>
+			</section>
 
-			<div id="home-page">
-			  
-			    <div id="content">
-			      	<img src="" style="width: 100px; height: 100px; background-color: red;">
+			<!-- ACTVITY MATCH PAGE -->
 
-			    	<p>Event info</p>
-			    	<p>Profile matches with buttons.</p>
+			<section class="page activity-match-page">
+				<h1 id="homeTitle">matchAjada</h1>
+				<p id="homeSlogan">This is the activity match page.</p>
 
-			    	<button class="middle page-turn btn btn-default" type="button" id="login" next="confirm-activity-page">Clear Filter</button>
+				<div id="home-page">
+				  
+				    <div id="content">
+				      	<img src="" style="width: 100px; height: 100px; background-color: red;">
 
-			    </div>
-			</div>
-		</section>
+				    	<p>Event info</p>
+				    	<p>Profile matches with buttons.</p>
 
-		<section class="page confirm-activity-page">
-			<h1 id="homeTitle">confirmAjada</h1>
-			<p id="homeSlogan">This is the confirmed activity page.</p>
+				    	<button class="middle page-turn btn btn-default" type="button" id="login" next="confirm-activity-page">Clear Filter</button>
 
-			<div id="home-page">
-			  
-			    <div id="content">
-			      	<img src="" style="width: 100px; height: 100px; background-color: red;">
+				    </div>
+				</div>
+			</section>
 
-			    	<p>Confirmation info</p>
-			    	<p>Contact info and mini messaging.</p>
+			<!-- FINAL CONFIRM ACTIVITY PAGE -->
 
-			    </div>
-			</div>
-		</section>
+			<section class="page confirm-activity-page">
+				<h1 id="homeTitle">confirmAjada</h1>
+				<p id="homeSlogan">This is the confirmed activity page.</p>
 
+				<div id="home-page">
+				  
+				    <div id="content">
+				      	<img src="" style="width: 100px; height: 100px; background-color: red;">
 
+				    	<p>Confirmation info</p>
+				    	<p>Contact info and mini messaging.</p>
 
-	</div>
+				    </div>
+				</div>
+			</section>
 
-	<script data-main="javascripts/dating-site" src="lib/bower_components/requirejs/require.js"></script>
+		</div>
+		
 
-</body>
+		<script data-main="javascripts/dating-site" src="lib/bower_components/requirejs/require.js"></script>
+
+	</body>
 </html>

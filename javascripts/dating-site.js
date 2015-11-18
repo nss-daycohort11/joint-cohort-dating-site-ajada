@@ -30,6 +30,8 @@ require(
       });
     });
 
+    /*jshint esnext: true */
+
     var signup = false;
     $('#signupButton').on("click", function(){
       signup = true;
