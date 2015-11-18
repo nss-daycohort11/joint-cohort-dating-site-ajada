@@ -1,4 +1,4 @@
-define(["register-user", "populate-profile", "return-users"], function(registeruser, populate, returnuser) {
+define(["register-user", "populate-profile", "return-users"], function(registeruser, populateUserToProfile, returnusers) {
 	var thisUserObject = {}, genderOptions, orientationOptions, createNewAccountButton;
 	
 	createNewAccountButton = $("#submit-created-profile");
@@ -62,9 +62,21 @@ define(["register-user", "populate-profile", "return-users"], function(registeru
 	        console.log(userData);
 	      }
 	    });
-
+/*
 	    returnuser.retrieveUsers();
-	    populate.populateProfile();
+	    populate.populateProfile();*/
+
+	    returnusers.retrieveUsers()
+          // Gets the list of users once ajax call complete
+          .then(function(users) {
+            console.log("users", users);
+            // On sign in, populates user profile and all dating site users. 
+            populateUserToProfile.populateProfile(authData, users);
+          })
+          .fail(function(error) {
+            console.log("error", error);
+          });
+
 	    console.log("This is inside click");
           
 

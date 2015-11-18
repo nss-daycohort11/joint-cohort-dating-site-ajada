@@ -14,13 +14,13 @@ require.config({
 });
 
 require(
-  ["jquery", "q", "dependencies", "eventsAPI", "main", "hbs!../templates/profile", "populate-profile", "return-users"], 
-  function($, Q, _$_, eventsAPI, main, profileTemplate, populateUserToProfile, returnusers) {
+  ["jquery", "q", "dependencies", "eventsAPI", "main", "hbs!../templates/profile", "populate-profile", "return-users", "authCall"], 
+  function($, Q, _$_, eventsAPI, main, profileTemplate, populateUserToProfile, returnusers, authCall) {
     
     var myFirebaseRef = new Firebase("https://ajada.firebaseio.com/");
 
     myFirebaseRef.child("Users").on("value", function(snapshot) {
-      console.log(snapshot.val());  // Alerts "San Francisco"
+
     });
 
     var promise = eventsAPI();
@@ -42,31 +42,27 @@ require(
     $('#login').on("click", function(){
       var email = $('#email').val();
       var password = $('#password').val();
-      console.log(email, password);
-      myFirebaseRef.authWithPassword({
-        email    : email,
-        password : password
-      }, function(error, authData) {
-        if (error) {
-          console.log("Login Failed!", error);
-        } else {
-          console.log("Authenticated successfully with payload:", authData);
+      var auth;
 
-        returnusers.retrieveUsers()
-          // Gets the list of users once ajax call complete
-          .then(function(users) {
-            console.log("users", users);
-            // On sign in, populates user profile and all dating site users. 
-            populateUserToProfile.populateProfile(authData, users);
-          })
-          .fail(function(error) {
-            console.log("error", error);
-          });
-        }
-      });
+      authCall.authenticate(email, password, myFirebaseRef) 
+        // Send email and password for login authentication
+        .then(function(authData) {
+          auth = authData;
+          return returnusers.retrieveUsers();
+        })
+        // Gets the list of users once ajax call complete
+        .then(function(userLibrary) {
+          console.log("userLibrary", userLibrary);
+          console.log("authData", auth);
+          // On sign in, populates user profile and all dating site users. 
+          populateUserToProfile.populateProfile(auth, userLibrary);
+        })
+        .fail(function(error) {
+          console.log("error", error);
+        });
     });
 
-    
+  
     
     $(".page").hide();
     $("#entry-screen").show();
