@@ -16,7 +16,7 @@ define(["q", "jquery"], function(Q, $) {
 	        })
 	        .done(function(users) {
 	        	/*appUsers = users;*/
-	        	console.log(users);
+
 	        	deferred.resolve(users);
 	        })
 	        .fail(function(error) {

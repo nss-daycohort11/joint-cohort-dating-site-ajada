@@ -20,7 +20,7 @@ require(
     var myFirebaseRef = new Firebase("https://ajada.firebaseio.com/");
 
     myFirebaseRef.child("Users").on("value", function(snapshot) {
-      console.log(snapshot.val());  // Alerts "San Francisco"
+
     });
 
     var promise = eventsAPI();
@@ -42,7 +42,7 @@ require(
     $('#login').on("click", function(){
       var email = $('#email').val();
       var password = $('#password').val();
-      console.log(email, password);
+
       myFirebaseRef.authWithPassword({
         email    : email,
         password : password
@@ -50,12 +50,12 @@ require(
         if (error) {
           console.log("Login Failed!", error);
         } else {
-          console.log("Authenticated successfully with payload:", authData);
+
 
         returnusers.retrieveUsers()
           // Gets the list of users once ajax call complete
           .then(function(users) {
-            console.log("users", users);
+
             // On sign in, populates user profile and all dating site users. 
             populateUserToProfile.populateProfile(authData, users);
           })

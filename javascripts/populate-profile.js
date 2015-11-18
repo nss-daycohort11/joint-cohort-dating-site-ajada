@@ -5,21 +5,19 @@ define(["q", "jquery", "return-users"], function(Q, $, returnuser) {
 		/*jshint esnext: true */
 
 		populateProfile: function(authData, users) {
-			console.log(users);
 	        var signedInUserProfile;
-	        var otherUsers = [];
+	        var otherUsers = {};
 	        for (var key in users) {
 	          if(users[key].email === authData.password.email){
 	            signedInUserProfile = users[key];
 	          } else {
-	            otherUsers.push(users[key]);
+	          	// Stores matches on a modified object of objects retaining their UID stored in key
+	            otherUsers[key] = users[key];
 	          }
 	        }
-	        console.log("signedInUserProfile", signedInUserProfile);
-	        console.log("otherUsers", otherUsers);
+
 	        require(['hbs!../templates/profile'], function(profileTemplate){
-	          	var justThisObject = {"userprofiles":{ "userprofiles": {signedInUserProfile} } };
-	          	console.log("justThisObject", justThisObject);
+	          	var justThisObject = {'userprofiles':{ 'userprofiles': {signedInUserProfile} } };
 	          	$('#profile-content').html(profileTemplate(signedInUserProfile));
 	        });
 	        require(['hbs!../templates/users'], function(usersTemplate) {
@@ -29,13 +27,3 @@ define(["q", "jquery", "return-users"], function(Q, $, returnuser) {
 
 	};
 });
-
-
-/*returnuser.retrieveUsers()
-          .then (function(users) {
-            console.log("Log users", users);
-            populate.populateProfile(users);
-          })
-          .fail (function(error) {
-            console.log("ERROR, muthafucka", error);
-          });*/
