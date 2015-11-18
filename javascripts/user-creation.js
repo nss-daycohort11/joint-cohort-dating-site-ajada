@@ -3,28 +3,23 @@ define(["register-user"], function(registeruser) {
 	
 	createNewAccountButton = $("#submit-created-profile");
 
+
+	// Collects Radio value from any set of radio buttons w/ same name
 	function getRadioValue(name) {
 	    var value;
-	    // get list of radio buttons with specified name
 		radios = $("input[name = " + name + "]"); 
 	    
-	    // loop through list of radio buttons
 	    for (var i = 0; i < radios.length; i++) {
 	        if ( radios[i].checked ) { // radio checked?
 	            value = radios[i].value; // if so, hold its value in value
 	            break;
 	        }
 	    } // closes for loop
-	    console.log("value", name, value);
+
 	    return value;
 	} // closes getRadioValue function
 
-
-
-	// genderOptions = $("#gender-options");
-
-	createNewAccountButton.click(function () {
-		orientationOptions = $("#orientation-options");
+	createNewAccountButton.click(function () { // collects information and stores on thisUserObject at relevant key
 
 		thisUserObject.username = $("#create-username-input").val();
 
@@ -41,9 +36,7 @@ define(["register-user"], function(registeruser) {
 		thisUserObject.email = $('#create-email-input').val();
 
 		registeruser(thisUserObject)
-			.then(function(data) {
-				console.log("data", data);
-			})
+			.then()
 			.fail(function(error) {
 				console.log("error", error);
 			});

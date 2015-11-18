@@ -20,7 +20,7 @@ require(
     var myFirebaseRef = new Firebase("https://ajada.firebaseio.com/");
 
     myFirebaseRef.child("Users").on("value", function(snapshot) {
-      console.log(snapshot.val());  // Alerts "San Francisco"
+      console.log(snapshot.val());
     });
 
     var promise = eventsAPI();
@@ -50,18 +50,10 @@ require(
           console.log("Login Failed!", error);
         } else {
           console.log("Authenticated successfully with payload:", authData);
-          // require(['hbs!../templates/profile'], function(profileTemplate){
-          //   $('#personal-info').html(profileTemplate({profile: authData.password}));
-          // });
-          // var f2 = new Firebase("https://ajada.firebaseio.com/userprofiles");
-          // f2.child("userprofiles").on("value", function(snapshot) {
-          //   console.log(snapshot.val());  // Alerts "San Francisco"
-          //   var users = snapshot.val();
-          // });
+
           $.ajax({
             url: "https://ajada.firebaseio.com/userprofiles.json",
             method: "GET"
-            // data: JSON.stringify(newUser)
           })
           .done(function(users) {
             console.log(users);
