@@ -1,4 +1,4 @@
-define(["user-creation", "register-user"], function(usercreation, registeruser) {
+define(["user-creation", "register-user", "favoriting"], function(usercreation, registeruser, favoriting) {
 
 
 

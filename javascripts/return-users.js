@@ -15,7 +15,7 @@ define(["q", "jquery"], function(Q, $) {
 	            // data: JSON.stringify(newUser)
 	        })
 	        .done(function(users) {
-	        	console.log("from ajax call, users", users);
+
 	        	deferred.resolve(users);
 	        })
 	        .fail(function(error) {
