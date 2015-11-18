@@ -52,8 +52,6 @@ require(
         })
         // Gets the list of users once ajax call complete
         .then(function(userLibrary) {
-          console.log("userLibrary", userLibrary);
-          console.log("authData", auth);
           // On sign in, populates user profile and all dating site users. 
           populateUserToProfile.populateProfile(auth, userLibrary);
         })
